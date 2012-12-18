@@ -1,0 +1,23 @@
+ibrows_newsletter:
+  mandants:
+    # generate a secure token for each mandant!
+    default:  ThisTokenIsNotSoSecretChangeItDefault
+    mandantA:  ThisTokenIsNotSoSecretChangeItMandantA
+    mandantB:  ThisTokenIsNotSoSecretChangeItMandantB
+  classes:
+    model:
+      mandant:      Ibrows\NewsletterTestBundle\Entity\Mandant
+      newsletter:   Ibrows\NewsletterTestBundle\Entity\Newsletter
+      subscriber:   Ibrows\NewsletterTestBundle\Entity\Subscriber
+      design:       Ibrows\NewsletterTestBundle\Entity\Design
+      user:         Ibrows\NewsletterTestBundle\Entity\User
+      block:        Ibrows\NewsletterTestBundle\Entity\Block
+      group:        Ibrows\NewsletterTestBundle\Entity\Group
+      readlog:      Ibrows\NewsletterTestBundle\Entity\Log\ReadLog
+      sentlog:      Ibrows\NewsletterTestBundle\Entity\Log\SentLog
+      sendsettings: Ibrows\NewsletterTestBundle\Entity\SendSettings
+      mailjob:      Ibrows\NewsletterTestBundle\Entity\MailJob
+  filesystem:
+      block:
+        directory:  %kernel.root_dir%/../web/uploads/block
+        public:     /uploads/block

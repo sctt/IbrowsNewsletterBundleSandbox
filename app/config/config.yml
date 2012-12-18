@@ -2,6 +2,8 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
 
+    - { resource: ibrows_newsletter.yml }
+
 framework:
     #esi:             ~
     #translator:      { fallback: "%locale%" }
