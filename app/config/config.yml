@@ -2,11 +2,13 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
 
+    - { resource: fos_user.yml }
+    - { resource: stfalcon_tinymce.yml }
     - { resource: ibrows_newsletter.yml }
 
 framework:
     #esi:             ~
-    #translator:      { fallback: "%locale%" }
+    translator:      { fallback: "%locale%" }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -28,7 +30,6 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -40,17 +41,60 @@ assetic:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:   "%database_driver%"
-        host:     "%database_host%"
-        port:     "%database_port%"
-        dbname:   "%database_name%"
-        user:     "%database_user%"
-        password: "%database_password%"
-        charset:  UTF8
+        types:
+            nostreamblob: Ibrows\Bundle\NewsletterBundle\DBAL\Types\NoStreamBlobType
+        default_connection:   default
+        connections:
+            default:
+                driver:   %database_driver%
+                host:     %database_host%
+                port:     %database_port%
+                dbname:   %database_name%
+                user:     %database_user%
+                password: %database_password%
+                charset:  UTF8
+            mandantA:
+                driver:   %database_driver%
+                host:     %database_host%
+                port:     %database_port%
+                dbname:   newslettersandbox_mandanta
+                user:     %database_user%
+                password: %database_password%
+                charset:  UTF8
+            mandantB:
+                driver:   %database_driver%
+                host:     %database_host%
+                port:     %database_port%
+                dbname:   newslettersandbox_mandantb
+                user:     %database_user%
+                password: %database_password%
+                charset:  UTF8
 
     orm:
-        auto_generate_proxy_classes: "%kernel.debug%"
-        auto_mapping: true
+        auto_generate_proxy_classes: %kernel.debug%
+        default_entity_manager: default
+        entity_managers:
+            default:
+                connection: default
+                mappings:
+                    IbrowsNewsletterSandboxBundle: ~
+                    FOSUserBundle: ~
+            mandantA:
+                connection: mandantA
+                mappings:
+                    ibrows_newsletter:
+                        type: annotation
+                        prefix: Ibrows\NewsletterSandboxBundle\Entity\Newsletter
+                        dir: "%kernel.root_dir%/../src/Ibrows/NewsletterSandboxBundle/Entity/Newsletter"
+                        is_bundle: false
+            mandantB:
+                connection: mandantB
+                mappings:
+                    ibrows_newsletter:
+                        type: annotation
+                        prefix: Ibrows\NewsletterSandboxBundle\Entity\Newsletter
+                        dir: "%kernel.root_dir%/../src/Ibrows/NewsletterSandboxBundle/Entity/Newsletter"
+                        is_bundle: false
 
 # Swiftmailer Configuration
 swiftmailer:
