@@ -77,19 +77,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal",
-                "reference": "f63af1948a609a96b8ea1c1302c7cdf2f9f51468"
+                "reference": "00f9575d24a15931c2ccfafd888b3d1d0bb5bd03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/dbal/archive/f63af1948a609a96b8ea1c1302c7cdf2f9f51468.zip",
-                "reference": "f63af1948a609a96b8ea1c1302c7cdf2f9f51468",
+                "url": "https://github.com/doctrine/dbal/archive/00f9575d24a15931c2ccfafd888b3d1d0bb5bd03.zip",
+                "reference": "00f9575d24a15931c2ccfafd888b3d1d0bb5bd03",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
                 "doctrine/common": "2.3.*"
             },
-            "time": "2012-12-04 21:06:56",
+            "time": "2012-12-17 15:35:54",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -283,24 +283,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibrows/IbrowsNewsletterBundle",
-                "reference": "a54f1fb1a90aa57564a0a22d5ce8dd61eb4cccf4"
+                "reference": "6a8ee239931a3f53c6df83f4c3a210e7155b9708"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/ibrows/IbrowsNewsletterBundle/archive/a54f1fb1a90aa57564a0a22d5ce8dd61eb4cccf4.zip",
-                "reference": "a54f1fb1a90aa57564a0a22d5ce8dd61eb4cccf4",
+                "url": "https://github.com/ibrows/IbrowsNewsletterBundle/archive/6a8ee239931a3f53c6df83f4c3a210e7155b9708.zip",
+                "reference": "6a8ee239931a3f53c6df83f4c3a210e7155b9708",
                 "shasum": ""
             },
             "require": {
                 "symfony/symfony": "2.1.x-dev",
                 "stfalcon/tinymce-bundle": "dev-master"
             },
-            "time": "2012-12-17 13:06:03",
+            "time": "2012-12-18 08:50:47",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
                 "psr-0": {
-                    "Ibrows\\NewsletterBundle": ""
+                    "Ibrows\\Bundle\\NewsletterBundle": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
