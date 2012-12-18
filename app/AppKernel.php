@@ -5,6 +5,9 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
+    /**
+     * @return array
+     */
     public function registerBundles()
     {
         $bundles = array(
@@ -19,7 +22,12 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
-            new Ibrows\Bundle\NewsletterBundle\IbrowsNewsletterBundle()
+
+            new FOS\UserBundle\FOSUserBundle(),
+            new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
+            new Ibrows\Bundle\NewsletterBundle\IbrowsNewsletterBundle(),
+
+            new Ibrows\NewsletterSandboxBundle\IbrowsNewsletterSandboxBundle()
         );
 
         if(in_array($this->getEnvironment(), array('dev', 'test'))){
@@ -31,6 +39,9 @@ class AppKernel extends Kernel
         return $bundles;
     }
 
+    /**
+     * @param LoaderInterface $loader
+     */
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
