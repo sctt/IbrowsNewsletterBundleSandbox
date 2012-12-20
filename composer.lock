@@ -1,5 +1,5 @@
 {
-    "hash": "007d21dfaa360f8e6ac20bda426ed4b0",
+    "hash": "9a78d3a2131103471a872680639605df",
     "packages": [
         {
             "name": "doctrine/common",
@@ -283,12 +283,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle",
-                "reference": "779386c3fa2193347d2cd890f5687c5ee45f0bbe"
+                "reference": "f1e16397ffe06cb38c19d11734204ea0c0699d1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle/archive/779386c3fa2193347d2cd890f5687c5ee45f0bbe.zip",
-                "reference": "779386c3fa2193347d2cd890f5687c5ee45f0bbe",
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle/archive/f1e16397ffe06cb38c19d11734204ea0c0699d1b.zip",
+                "reference": "f1e16397ffe06cb38c19d11734204ea0c0699d1b",
                 "shasum": ""
             },
             "require": {
@@ -309,7 +309,7 @@
                 "doctrine/doctrine-bundle": "*",
                 "doctrine/mongodb-odm-bundle": "*"
             },
-            "time": "2012-12-18 11:41:10",
+            "time": "2012-12-19 13:19:15",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -348,25 +348,43 @@
             ]
         },
         {
+            "name": "ibrows/besimpledeployment",
+            "version": "master",
+            "target-dir": "BeSimple/DeploymentBundle",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/ibrows/BeSimpleDeploymentBundle.git",
+                "reference": "master"
+            },
+            "type": "symfony-bundle",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "BeSimple\\DeploymentBundle": ""
+                }
+            },
+            "time": "2012-07-03 07:28:45"
+        },
+        {
             "name": "ibrows/newsletter-bundle",
             "version": "dev-master",
             "target-dir": "Ibrows/Bundle/NewsletterBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibrows/IbrowsNewsletterBundle",
-                "reference": "6a8ee239931a3f53c6df83f4c3a210e7155b9708"
+                "reference": "8354d462f8dee978ad4b690c7505070a41766ac4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/ibrows/IbrowsNewsletterBundle/archive/6a8ee239931a3f53c6df83f4c3a210e7155b9708.zip",
-                "reference": "6a8ee239931a3f53c6df83f4c3a210e7155b9708",
+                "url": "https://github.com/ibrows/IbrowsNewsletterBundle/archive/8354d462f8dee978ad4b690c7505070a41766ac4.zip",
+                "reference": "8354d462f8dee978ad4b690c7505070a41766ac4",
                 "shasum": ""
             },
             "require": {
                 "symfony/symfony": "2.1.x-dev",
-                "stfalcon/tinymce-bundle": "dev-master"
+                "stfalcon/tinymce-bundle": "*"
             },
-            "time": "2012-12-18 08:50:47",
+            "time": "2012-12-20 10:27:52",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
@@ -401,18 +419,18 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/jdorn/sql-formatter.git",
-                "reference": "0461ab0ff16e096b8c51f085349f38ed5f2ea241"
+                "reference": "15ab7a899e33f42682f74804d340a6995711a0d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/jdorn/sql-formatter/archive/0461ab0ff16e096b8c51f085349f38ed5f2ea241.zip",
-                "reference": "0461ab0ff16e096b8c51f085349f38ed5f2ea241",
+                "url": "https://github.com/jdorn/sql-formatter/archive/15ab7a899e33f42682f74804d340a6995711a0d4.zip",
+                "reference": "15ab7a899e33f42682f74804d340a6995711a0d4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2012-11-17 22:31:58",
+            "time": "2012-12-18 21:46:03",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -831,12 +849,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensio/SensioDistributionBundle",
-                "reference": "v2.1.4"
+                "reference": "v2.1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sensio/SensioDistributionBundle/archive/v2.1.4.zip",
-                "reference": "v2.1.4",
+                "url": "https://github.com/sensio/SensioDistributionBundle/archive/v2.1.5.zip",
+                "reference": "v2.1.5",
                 "shasum": ""
             },
             "require": {
@@ -878,19 +896,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensio/SensioFrameworkExtraBundle",
-                "reference": "v2.1.4"
+                "reference": "v2.1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sensio/SensioFrameworkExtraBundle/archive/v2.1.4.zip",
-                "reference": "v2.1.4",
+                "url": "https://github.com/sensio/SensioFrameworkExtraBundle/archive/v2.1.5.zip",
+                "reference": "v2.1.5",
                 "shasum": ""
             },
             "require": {
                 "symfony/framework-bundle": "2.1.*",
                 "doctrine/common": ">=2.1,<2.4-dev"
             },
-            "time": "2012-10-17 04:38:27",
+            "time": "2012-12-18 17:19:01",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1142,12 +1160,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/MonologBundle",
-                "reference": "51517152a608926ee6b40ed8cfbba1a708f0a14f"
+                "reference": "v2.1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/MonologBundle/archive/51517152a608926ee6b40ed8cfbba1a708f0a14f.zip",
-                "reference": "51517152a608926ee6b40ed8cfbba1a708f0a14f",
+                "url": "https://github.com/symfony/MonologBundle/archive/v2.1.5.zip",
+                "reference": "v2.1.5",
                 "shasum": ""
             },
             "require": {
@@ -1198,12 +1216,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/SwiftmailerBundle",
-                "reference": "2393ba6d4f1b544349123e24a16bbc749bef9e55"
+                "reference": "v2.1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/SwiftmailerBundle/archive/2393ba6d4f1b544349123e24a16bbc749bef9e55.zip",
-                "reference": "2393ba6d4f1b544349123e24a16bbc749bef9e55",
+                "url": "https://github.com/symfony/SwiftmailerBundle/archive/v2.1.5.zip",
+                "reference": "v2.1.5",
                 "shasum": ""
             },
             "require": {
@@ -1253,12 +1271,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "ab64da5671ec161ab73aba07fc011bc8de56ae41"
+                "reference": "06e1de9742eadb097b765d01788c24ce6ee5ee66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/archive/ab64da5671ec161ab73aba07fc011bc8de56ae41.zip",
-                "reference": "ab64da5671ec161ab73aba07fc011bc8de56ae41",
+                "url": "https://github.com/symfony/symfony/archive/06e1de9742eadb097b765d01788c24ce6ee5ee66.zip",
+                "reference": "06e1de9742eadb097b765d01788c24ce6ee5ee66",
                 "shasum": ""
             },
             "require": {
@@ -1307,7 +1325,7 @@
                 "propel/propel1": "dev-master",
                 "monolog/monolog": "1.*"
             },
-            "time": "2012-12-15 17:28:15",
+            "time": "2012-12-20 14:53:35",
             "type": "library",
             "installation-source": "source",
             "autoload": {

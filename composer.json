@@ -21,7 +21,9 @@
         "kriswallsmith/assetic": "1.1.*@dev",
 
         "friendsofsymfony/user-bundle": "dev-master",
-        "ibrows/newsletter-bundle": "dev-master"
+        "ibrows/newsletter-bundle": "dev-master",
+
+        "ibrows/besimpledeployment": "master"
     },
     "scripts": {
         "post-install-cmd": [
@@ -52,6 +54,21 @@
                 "name": "ibrows/newsletterbundle",
                 "source": {
                     "url": "https://github.com/ibrows/IbrowsNewsletterBundle.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "type": "symfony-bundle",
+                "autoload": {"psr-0": { "BeSimple\\DeploymentBundle": "" }},
+                "target-dir": "BeSimple/DeploymentBundle",
+                "version": "master",
+                "name": "ibrows/besimpledeployment",
+                "source": {
+                    "url": "git://github.com/ibrows/BeSimpleDeploymentBundle.git",
                     "type": "git",
                     "reference": "master"
                 }
