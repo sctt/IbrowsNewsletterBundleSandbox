@@ -23,11 +23,18 @@ class AppKernel extends Kernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
 
+            # recommended
             new FOS\UserBundle\FOSUserBundle(),
+
+            # needed
             new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
             new Ibrows\Bundle\NewsletterBundle\IbrowsNewsletterBundle(),
 
-            new Ibrows\NewsletterSandboxBundle\IbrowsNewsletterSandboxBundle()
+            # own bundle
+            new Ibrows\NewsletterSandboxBundle\IbrowsNewsletterSandboxBundle(),
+
+            # if needed
+            new \BeSimple\DeploymentBundle\BeSimpleDeploymentBundle(),
         );
 
         if(in_array($this->getEnvironment(), array('dev', 'test'))){
