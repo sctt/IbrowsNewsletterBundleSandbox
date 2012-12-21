@@ -1,9 +1,3 @@
-# IbrowsNewsletter
-ibrows_newsletter:
-    resource: "@IbrowsNewsletterBundle/Controller/"
-    type:     annotation
-    prefix:   /newsletter
-    
 # FosUser
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
@@ -23,3 +17,15 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
+
+# IbrowsNewsletter
+ibrows_newsletter:
+    resource: "@IbrowsNewsletterBundle/Controller/"
+    type:     annotation
+    prefix:   /newsletter
+
+# IbrowsNewsletterSandbox
+ibrows_newsletter_sandbox:
+  resource: "@IbrowsNewsletterSandboxBundle/Controller"
+  type:     annotation
+  prefix:   /
