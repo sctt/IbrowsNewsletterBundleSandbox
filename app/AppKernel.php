@@ -34,7 +34,7 @@ class AppKernel extends Kernel
             new Ibrows\NewsletterSandboxBundle\IbrowsNewsletterSandboxBundle(),
 
             # if needed
-            new \BeSimple\DeploymentBundle\BeSimpleDeploymentBundle(),
+            new BeSimple\DeploymentBundle\BeSimpleDeploymentBundle(),
         );
 
         if(in_array($this->getEnvironment(), array('dev', 'test'))){
