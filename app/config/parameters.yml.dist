@@ -1,0 +1,29 @@
+parameters:
+    database_driver:   pdo_mysql
+    database_host:     127.0.0.1
+    database_port:     ~
+    database_name:     name
+    database_user:     user
+    database_password: pass
+
+    database_driver_mandanta:   pdo_mysql
+    database_host_mandanta:     127.0.0.1
+    database_port_mandanta:     ~
+    database_name_mandanta:     name
+    database_user_mandanta:     user
+    database_password_mandanta: host
+
+    database_driver_mandantb:   pdo_mysql
+    database_host_mandantb:     127.0.0.1
+    database_port_mandantb:     ~
+    database_name_mandantb:     name
+    database_user_mandantb:     user
+    database_password_mandantb: host
+
+    mailer_transport:  smtp
+    mailer_host:       127.0.0.1
+    mailer_user:       ~
+    mailer_password:   ~
+
+    locale:            de
+    secret:            ThisTokenIsNotSoSecretChangeIt

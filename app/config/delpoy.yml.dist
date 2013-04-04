@@ -1,0 +1,29 @@
+be_simple_deployment:
+  rsync:
+    delete:     true
+  rules:
+    eclipse:
+      ignore:   [.settings, .buildpath, .project]
+    netbeans:
+      ignore:   [nbproject]
+    phpstorm:
+      ignore:   [.idea]
+    git:
+      ignore:   [.git, .git*]
+    svn:
+      ignore:   [.svn]
+    symfony:
+      ignore:   [/app/cache/*, /app/logs/*, /app/config/parameters.default.yml, /app/config/parameters.yml, /web/bundles/*, /web/uploads/*, /web/js/*, /web/css/*, /web/images/*, /web/img/*]
+    hosting:
+      ignore:   [/.htaccess, /.htpasswd, /web/.htaccess, /web/.user.ini, /web/manage.php, /web/phpinfo.php, /web/ntunnel_mysql.php]
+    system:
+      ignore:   [._*, .DS_Store]
+    composer:
+      ignore:   [composer.phar]
+  servers:
+    sandbox:
+      host:     host
+      username: username
+      path:     /path/to/webroot
+      rules:    [eclipse, netbeans, phpstorm, git, svn, symfony, hosting, system, composer]
+      commands: []
