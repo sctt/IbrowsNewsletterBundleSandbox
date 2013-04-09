@@ -21,7 +21,7 @@
         "kriswallsmith/assetic": "1.1.*@dev",
 
         "friendsofsymfony/user-bundle": "dev-master",
-        "ibrows/newsletter-bundle": "dev-master",
+        "ibrows/newsletter-bundle": "1.*",
 
         "ibrows/besimpledeployment": "master"
     },
