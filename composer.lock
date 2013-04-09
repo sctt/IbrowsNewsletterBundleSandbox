@@ -1,5 +1,5 @@
 {
-    "hash": "9a78d3a2131103471a872680639605df",
+    "hash": "7ba969c34047bc1873ec546185224f75",
     "packages": [
         {
             "name": "doctrine/common",
@@ -356,21 +356,21 @@
                     "BeSimple\\DeploymentBundle": ""
                 }
             },
-            "time": "2013-03-05 11:42:08"
+            "time": "2012-07-03 07:28:45"
         },
         {
             "name": "ibrows/newsletter-bundle",
-            "version": "dev-master",
+            "version": "1.0.0",
             "target-dir": "Ibrows/Bundle/NewsletterBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibrows/IbrowsNewsletterBundle.git",
-                "reference": "b8ab937c7813b78eaeeb186e76061a56b9885934"
+                "reference": "1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibrows/IbrowsNewsletterBundle/zipball/b8ab937c7813b78eaeeb186e76061a56b9885934",
-                "reference": "b8ab937c7813b78eaeeb186e76061a56b9885934",
+                "url": "https://api.github.com/repos/ibrows/IbrowsNewsletterBundle/zipball/1.0.0",
+                "reference": "1.0.0",
                 "shasum": ""
             },
             "require": {
@@ -1404,8 +1404,7 @@
     "stability-flags": {
         "twig/extensions": 20,
         "kriswallsmith/assetic": 20,
-        "friendsofsymfony/user-bundle": 20,
-        "ibrows/newsletter-bundle": 20
+        "friendsofsymfony/user-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"
