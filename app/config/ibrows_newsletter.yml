@@ -7,7 +7,7 @@ ibrows_newsletter:
     model:
       mandant:    Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Mandant
       newsletter: Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Newsletter
-      subscriber: Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Contact
+      subscriber: Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Subscriber
       design:     Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Design
       user:       Ibrows\NewsletterSandboxBundle\Entity\Newsletter\User
       block:      Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Block
