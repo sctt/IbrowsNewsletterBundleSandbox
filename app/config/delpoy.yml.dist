@@ -1,6 +1,7 @@
 be_simple_deployment:
   rsync:
     delete:     true
+    options:    -cCvaL
   rules:
     eclipse:
       ignore:   [.settings, .buildpath, .project]
@@ -13,17 +14,41 @@ be_simple_deployment:
     svn:
       ignore:   [.svn]
     symfony:
-      ignore:   [/app/cache/*, /app/logs/*, /app/config/parameters.default.yml, /app/config/parameters.yml, /web/bundles/*, /web/uploads/*, /web/js/*, /web/css/*, /web/images/*, /web/img/*]
+      ignore:   [/app/cache/*, /app/logs/*, /web/bundles/*, /web/uploads/*, /web/js/*, /web/css/*]
     hosting:
-      ignore:   [/.htaccess, /.htpasswd, /web/.htaccess, /web/.user.ini, /web/manage.php, /web/phpinfo.php, /web/ntunnel_mysql.php]
+      ignore:   [/.htaccess, /.htpasswd, /web/.user.ini]
     system:
       ignore:   [._*, .DS_Store]
-    composer:
-      ignore:   [composer.phar]
+  commands:
+    cache_clear:
+      type:     symfony
+      command:  cache:clear
+    assetic_dump:
+      type:     symfony
+      command:  assetic:dump
+    assets_install:
+      type:     symfony
+      command:  assets:install
+    doctrine_schema_update_force:
+      type:     symfony
+      command:  doctrine:schema:update --force --complete
+    doctrine_schema_update_dump:
+      type:     symfony
+      command:  doctrine:schema:update --dump-sql
+  ssh:
+    connect_methods:
+      server_to_client:
+         crypt: rijndael-cbc@lysator.liu.se, aes256-cbc, aes192-cbc, aes128-cbc, 3des-cbc, blowfish-cbc, cast128-cbc, arcfour
+      client_to_server:
+         crypt: rijndael-cbc@lysator.liu.se, aes256-cbc, aes192-cbc, aes128-cbc, 3des-cbc, blowfish-cbc, cast128-cbc, arcfour
+    pubkey_file:  %deploy_hostpoint_pubkey_file%
+    privkey_file: %deploy_hostpoint_privkey_file%
+    passphrase:   %deploy_hostpoint_passphrase%
   servers:
-    sandbox:
-      host:     host
-      username: username
-      path:     /path/to/webroot
-      rules:    [eclipse, netbeans, phpstorm, git, svn, symfony, hosting, system, composer]
-      commands: []
+    dev:
+      host:             host
+      username:         user
+      path:             /path/to/webroot
+      rules:            [eclipse, netbeans, phpstorm, git, svn, symfony, hosting, system]
+      commands:         [cache_clear, assets_install, assetic_dump, doctrine_schema_update_force]
+      symfony_command:  php -c web/.user.ini app/console --env=prod

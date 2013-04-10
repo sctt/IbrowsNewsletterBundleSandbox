@@ -23,7 +23,7 @@
         "friendsofsymfony/user-bundle": "dev-master",
         "ibrows/newsletter-bundle": "1.*",
 
-        "ibrows/besimpledeployment": "master"
+        "ibrows/be-simple-deployment-bundle": "1.*"
     },
     "scripts": {
         "post-install-cmd": [

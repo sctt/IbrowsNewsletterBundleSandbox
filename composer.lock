@@ -1,5 +1,5 @@
 {
-    "hash": "7ba969c34047bc1873ec546185224f75",
+    "hash": "1301e014230915cf673b59d007d4306b",
     "packages": [
         {
             "name": "doctrine/common",
@@ -342,13 +342,23 @@
             "time": "2013-01-25 16:25:45"
         },
         {
-            "name": "ibrows/besimpledeployment",
-            "version": "master",
+            "name": "ibrows/be-simple-deployment-bundle",
+            "version": "1.1.1",
             "target-dir": "BeSimple/DeploymentBundle",
             "source": {
                 "type": "git",
-                "url": "git://github.com/ibrows/BeSimpleDeploymentBundle.git",
-                "reference": "master"
+                "url": "https://github.com/ibrows/BeSimpleDeploymentBundle.git",
+                "reference": "1.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ibrows/BeSimpleDeploymentBundle/zipball/1.1.1",
+                "reference": "1.1.1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/framework-bundle": ">=2.0"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -356,7 +366,25 @@
                     "BeSimple\\DeploymentBundle": ""
                 }
             },
-            "time": "2012-07-03 07:28:45"
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Meier",
+                    "email": "mike.meier@ibrows.ch",
+                    "homepage": "http://www.ibrows.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Symfony2 applications deployment made easy",
+            "keywords": [
+                "deploy",
+                "deployment",
+                "ibrows"
+            ],
+            "time": "2013-03-05 11:42:08"
         },
         {
             "name": "ibrows/newsletter-bundle",

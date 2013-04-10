@@ -27,3 +27,7 @@ parameters:
 
     locale:            de
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    deploy_hostpoint_pubkey_file:   /home/.ssh/server.pub
+    deploy_hostpoint_privkey_file:  /home/.ssh/server
+    deploy_hostpoint_passphrase:    passphrase
