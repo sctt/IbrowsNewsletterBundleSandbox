@@ -11,6 +11,7 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = array(
+            # symfony
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
@@ -19,9 +20,6 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new JMS\AopBundle\JMSAopBundle(),
-            new JMS\DiExtraBundle\JMSDiExtraBundle($this),
-            new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
 
             # recommended
             new FOS\UserBundle\FOSUserBundle(),
@@ -32,15 +30,18 @@ class AppKernel extends Kernel
 
             # own bundle
             new Ibrows\NewsletterSandboxBundle\IbrowsNewsletterSandboxBundle(),
-
-            # if needed
-            new BeSimple\DeploymentBundle\BeSimpleDeploymentBundle(),
         );
 
         if(in_array($this->getEnvironment(), array('dev', 'test'))){
+            # symfony
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+        }
+
+        if($this->getEnvironment() == 'dev'){
+            # if needed
+            $bundles[] = new BeSimple\DeploymentBundle\BeSimpleDeploymentBundle();
         }
 
         return $bundles;

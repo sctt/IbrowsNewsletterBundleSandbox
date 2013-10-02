@@ -3,6 +3,8 @@ be_simple_deployment:
     delete:     true
     options:    -cCvaL
   rules:
+    project:
+      ignore:   []
     eclipse:
       ignore:   [.settings, .buildpath, .project]
     netbeans:
@@ -14,7 +16,7 @@ be_simple_deployment:
     svn:
       ignore:   [.svn]
     symfony:
-      ignore:   [/app/cache/*, /app/logs/*, /web/bundles/*, /web/uploads/*, /web/js/*, /web/css/*]
+      ignore:   [/app/cache/*, /app/logs/*, /app/config/parameters.yml, /web/bundles/*, /web/uploads/*, /web/js/*, /web/css/*]
     hosting:
       ignore:   [/.htaccess, /.htpasswd, /web/.user.ini]
     system:
@@ -41,14 +43,14 @@ be_simple_deployment:
          crypt: rijndael-cbc@lysator.liu.se, aes256-cbc, aes192-cbc, aes128-cbc, 3des-cbc, blowfish-cbc, cast128-cbc, arcfour
       client_to_server:
          crypt: rijndael-cbc@lysator.liu.se, aes256-cbc, aes192-cbc, aes128-cbc, 3des-cbc, blowfish-cbc, cast128-cbc, arcfour
-    pubkey_file:  %deploy_hostpoint_pubkey_file%
-    privkey_file: %deploy_hostpoint_privkey_file%
-    passphrase:   %deploy_hostpoint_passphrase%
+    pubkey_file:  %deploy_pubkey_file%
+    privkey_file: %deploy_privkey_file%
+    passphrase:   %deploy_passphrase%
   servers:
     dev:
-      host:             host
-      username:         user
-      path:             /path/to/webroot
+      host:             %deploy_host%
+      username:         %deploy_user%
+      path:             %deploy_path%
       rules:            [eclipse, netbeans, phpstorm, git, svn, symfony, hosting, system]
       commands:         [cache_clear, assets_install, assetic_dump, doctrine_schema_update_force]
-      symfony_command:  php -c web/.user.ini app/console --env=prod
+      symfony_command:  %deploy_symfony_command%

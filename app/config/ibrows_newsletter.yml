@@ -1,23 +1,23 @@
 ibrows_newsletter:
-  mandants:
-    default:    ThisTokenIsNotSoSecretChangeItdefault
-    mandantA:   ThisTokenIsNotSoSecretChangeItMandantA
-    mandantB:   ThisTokenIsNotSoSecretChangeItMandantB
-  classes:
-    model:
-      mandant:    Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Mandant
-      newsletter: Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Newsletter
-      subscriber: Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Subscriber
-      design:     Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Design
-      user:       Ibrows\NewsletterSandboxBundle\Entity\Newsletter\User
-      block:      Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Block
-      group:      Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Group
-      readlog:    Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Log\ReadLog
-      sendlog:    Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Log\SendLog
-      unsubscribelog: Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Log\UnsubscribeLog
-      sendsettings: Ibrows\NewsletterSandboxBundle\Entity\Newsletter\SendSettings
-      mailjob:    Ibrows\NewsletterSandboxBundle\Entity\Newsletter\MailJob
-  filesystem:
-    block:
-      public:     /uploads/block
-      directory: %kernel.root_dir%/../web/uploads/block
+    mandants:
+        default:    ThisTokenIsNotSoSecretChangeItdefault
+        mandantA:   ThisTokenIsNotSoSecretChangeItMandantA
+        mandantB:   ThisTokenIsNotSoSecretChangeItMandantB
+    classes:
+        model:
+            mandant:    Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Mandant
+            newsletter: Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Newsletter
+            subscriber: Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Subscriber
+            design:     Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Design
+            user:       Ibrows\NewsletterSandboxBundle\Entity\Newsletter\User
+            block:      Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Block
+            group:      Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Group
+            readlog:    Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Log\ReadLog
+            sendlog:    Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Log\SendLog
+            unsubscribelog: Ibrows\NewsletterSandboxBundle\Entity\Newsletter\Log\UnsubscribeLog
+            sendsettings: Ibrows\NewsletterSandboxBundle\Entity\Newsletter\SendSettings
+            mailjob:    Ibrows\NewsletterSandboxBundle\Entity\Newsletter\MailJob
+    filesystem:
+        block:
+            public: /uploads/block
+            directory: %kernel.root_dir%/../web/uploads/block

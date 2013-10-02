@@ -1,27 +1,27 @@
 stfalcon_tinymce:
-  include_jquery: false
-  tinymce_jquery: true
-  textarea_class: "tinymce"
-  tinymce_buttons:
-    unsubscribelink:
-      title: "Unsubscribe Link"
-      image: "http://placehold.it/30x30"
-    now:
-      title: "Now"
-      image: "http://placehold.it/30x30"
-    gendertitle:
-      title: "Gender Title"
-      image: "http://placehold.it/30x30"
-    statisticlogreadimage:
-      title: "Statistics Image"
-      image: "http://placehold.it/30x30"
-    readonlinelink:
-      title: "Read Online Link"
-      image: "http://placehold.it/30x30"
-  theme:
-    simple:
-      mode: "textareas"
-      theme: "advanced"
-      plugins: "fullscreen,table"
-      theme_advanced_buttons2: "unsubscribelink,now,gendertitle,statisticlogreadimage,readonlinelink"
-      #theme_advanced_buttons2: "tablecontrols"
+    include_jquery: false
+    tinymce_jquery: true
+    textarea_class: "tinymce"
+    tinymce_buttons:
+        unsubscribelink:
+            title: "Unsubscribe Link"
+            image: "http://placehold.it/30x30"
+        now:
+            title: "Now"
+            image: "http://placehold.it/30x30"
+        gendertitle:
+            title: "Gender Title"
+            image: "http://placehold.it/30x30"
+        statisticlogreadimage:
+            title: "Statistics Image"
+            image: "http://placehold.it/30x30"
+        readonlinelink:
+            title: "Read Online Link"
+            image: "http://placehold.it/30x30"
+    theme:
+        simple:
+            mode: "textareas"
+            theme: "advanced"
+            plugins: "fullscreen,table"
+            theme_advanced_buttons2: "unsubscribelink,now,gendertitle,statisticlogreadimage,readonlinelink"
+            #theme_advanced_buttons2: "tablecontrols"
