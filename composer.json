@@ -21,7 +21,6 @@
         "friendsofsymfony/user-bundle": "2.0.*@dev",
         "ibrows/newsletter-bundle": "dev-master",
         "stfalcon/tinymce-bundle": "0.2.*",
-
         "ibrows/be-simple-deployment-bundle": "1.*"
     },
     "scripts": {
