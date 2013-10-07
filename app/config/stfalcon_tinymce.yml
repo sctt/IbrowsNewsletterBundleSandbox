@@ -5,19 +5,19 @@ stfalcon_tinymce:
     tinymce_buttons:
         unsubscribelink:
             title: "Unsubscribe Link"
-            image: "http://placehold.it/30x30"
+            image: "https://cdn1.iconfinder.com/data/icons/CrystalClear/22x22/actions/news_unsubscribe.png"
         now:
             title: "Now"
-            image: "http://placehold.it/30x30"
+            image: "https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/48x48/calendar_2.png"
         gendertitle:
             title: "Gender Title"
-            image: "http://placehold.it/30x30"
+            image: "https://cdn1.iconfinder.com/data/icons/sem_labs_icon_pack/icons/users_mixed_gender.png"
         statisticlogreadimage:
             title: "Statistics Image"
-            image: "http://placehold.it/30x30"
+            image: "https://cdn3.iconfinder.com/data/icons/fatcow/32/chart_bar.png"
         readonlinelink:
             title: "Read Online Link"
-            image: "http://placehold.it/30x30"
+            image: "https://cdn1.iconfinder.com/data/icons/24x24-free-pixel-icons/24/Online.png"
     theme:
         simple:
             mode: "textareas"
